@@ -10,9 +10,15 @@
 
 @interface ViewController ()
 
+@property (nonatomic, weak) IBOutlet UIView *oscarView;
+
 @end
 
 @implementation ViewController
+
+- (IBAction)showOscar:(id)sender {
+  self.oscarView.hidden = NO;
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
