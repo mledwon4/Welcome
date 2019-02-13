@@ -11,6 +11,22 @@ pool:
 
 steps:
 - task: Xcode@5
+  displayName: 'Running XCTest/XCUITest'
+  inputs:
+    actions: 'test'
+    scheme: 'Welcome'
+    sdk: 'iphonesimulator'
+    configuration: 'Release'
+    xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
+    packageApp: false
+    xcWorkspacePath: 'myCurrencyExchange.xcodeproj'
+    destinationSimulators: 'iPhone 7'
+    destinationTypeOption: 'simulators'
+    destinationPlatformOption: 'iOS'
+    signingOption: "auto"
+    useXcpretty: true
+    publishJUnitResults: 'build/reports/junit.xml'
+- task: Xcode@5
   inputs:
     actions: 'build'
     scheme: 'Welcome'
