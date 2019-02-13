@@ -17,9 +17,9 @@ steps:
     scheme: 'Welcome'
     sdk: 'iphonesimulator'
     configuration: 'Release'
-    xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
+    xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
     packageApp: false
-    xcWorkspacePath: 'myCurrencyExchange.xcodeproj'
+    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     destinationSimulators: 'iPhone 7'
     destinationTypeOption: 'simulators'
     destinationPlatformOption: 'iOS'
