@@ -16,7 +16,7 @@ steps:
     actions: 'test'
     scheme: 'Welcome'
     sdk: 'iphonesimulator'
-    configuration: 'Release'
+    configuration: 'Debug'
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
     packageApp: false
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
@@ -26,22 +26,11 @@ steps:
     signingOption: "auto"
     useXcpretty: true
     publishJUnitResults: true
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit' # Options: JUnit, NUnit, VSTest, xUnit
-    testResultsFiles: '**/TEST-*.xml' 
-    #searchFolder: '$(System.DefaultWorkingDirectory)' # Optional
-    #mergeTestResults: false # Optional
-    #failTaskOnFailedTests: false # Optional
-    #testRunTitle: # Optional
-    #buildPlatform: # Optional
-    #buildConfiguration: # Optional
-    #publishRunAttachments: true # Optional
 - task: Xcode@5
   inputs:
     actions: 'build'
     scheme: 'Welcome'
     sdk: 'iphoneos'
-    configuration: 'Release'
+    configuration: 'Debug'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
