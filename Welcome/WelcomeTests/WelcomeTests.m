@@ -35,8 +35,8 @@ int android = 50;
   XCTAssertGreaterThan(apple, android);
 }
 
-- (void)testAppleEqualsBanana {
-  XCTAssertEqual(apple, banana);
+- (void)testtwoAppleEqualsBanana {
+  XCTAssertEqual(apple*2, banana);
 }
 
 @end
